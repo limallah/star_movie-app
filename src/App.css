@@ -1,0 +1,20 @@
+.grid {
+  width: 100%;
+  max-width: 40rem;
+  padding: 1.2rem;
+}
+
+.logo-sec {
+   display: flex;
+  -webkit-box-align: center;
+  justify-content: center;
+  align-items: center;
+  /* height: 3rem; */
+}
+
+.logo{
+  fill: rgb(255, 232, 31);
+  width: 100%;
+  max-width: 45rem;
+}
+

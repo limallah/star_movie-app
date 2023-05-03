@@ -1,0 +1,30 @@
+.movie {
+  padding: 1.5rem;
+  /* background-image: url('/movie-list-app-master/public/starwar-images/new-hope-2.jpg'); */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 12px;
+  text-align: left;
+  color: white;
+  font-size: medium;
+  font-weight: 100;
+}
+
+.movie h2 {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.movie h3 {
+  color: #646461;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.movie span > a {
+  display: block;
+  behavior: inherit;
+  color: #eccf77;
+  border-top: 2px solid rgba(255, 0, 0, 0.564);
+  padding-top: 0.6rem;
+  /* margin-bottom: 0.5rem; */
+}
