@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from "react";
-
 import MoviesList from "./components/MoviesList";
 import "./App.css";
 
@@ -16,18 +15,22 @@ function App() {
       const response = await fetch("https://swapi.dev/api/films/");
       if (!response.ok) {
         throw new Error("Something went wrong!"); 
-      }
+      } 
+      // console.log(response);
 
       const data = await response.json();
       const transformedMovies = data.results.map((movieData) => {
         return {
           id: movieData.episode_id,
+          mid: movieData.episode_id,
           title: movieData.title,
           openingText: movieData.opening_crawl,
           releaseDate: movieData.release_date,
+          director:movieData.director,
         };
       });
-      setMovies(transformedMovies);
+      // setMovies(transformedMovies);
+      setMovies(data.results);
     } catch (error) {
       setError(error.message);
     }
@@ -54,7 +57,7 @@ function App() {
   }
 
   return (
-    <React.Fragment>
+    <>
       <section className="logo-sec">
       <svg viewBox="0 0 1347.6 227.4" class="logo">
       <g id="Logo">
@@ -65,8 +68,8 @@ function App() {
       </svg>
       </section>
       <section className="grid">{content}</section>
-    </React.Fragment>
+    </>
   );
-}
+};
 
 export default App;
